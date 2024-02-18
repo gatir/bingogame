@@ -21,3 +21,8 @@ class BingoGame:
 
     def __minus_guess_left(self):
         self.__guess_left -= 1
+
+    def has_guess_left(self):
+        if self.__guess_left > 0:
+            return True
+        return False
