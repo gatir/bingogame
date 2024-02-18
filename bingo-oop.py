@@ -14,10 +14,12 @@ class BingoGame:
     def check_answer(self, answer):
         if answer > self.__rand_num:
             return ("choose lower number")
-        if answer < self.__rand_num:
+        elif answer < self.__rand_num:
             return ("Choose higher number")
-        if answer == self.__rand_num:
+        elif answer == self.__rand_num:
             return ("Bingo %s You did it" % self.name)
+        self.__win_state = True
+        self.__minus_guess_left()
 
     def __minus_guess_left(self):
         self.__guess_left -= 1
