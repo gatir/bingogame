@@ -28,3 +28,12 @@ class BingoGame:
         if self.__guess_left > 0:
             return True
         return False
+
+    def has_won(self):
+        return self.__win_state
+    
+    @classmethod
+    def game_has_winner(cls)
+        if any(player.has_won() is True for player in cls.player_list):
+            return True
+        return False
