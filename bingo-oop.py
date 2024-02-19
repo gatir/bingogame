@@ -51,12 +51,15 @@ class GameController():
                 break
 
 
-if __name__ == "__main__":
-    while True:
-        order = input("What you want to do? \norder: ")
-        if order == "add":
-            BingoGame()
-        elif order == "start":
-            GameController()
-        elif order == "exit":
-            break
+# if __name__ == "__main__":
+while True:
+    order = input("What you want to do? \norder: ")
+    if order == "add":
+        BingoGame()
+    elif order == "start":
+        GameController()
+    elif order == "reset":
+        BingoGame.player_list = []
+        BingoGame()
+    elif order == "exit":
+        break
